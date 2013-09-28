@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />    <title>Goodfind 2014 次代を創るビジネスリーダー／アントレプレナーのためのキャリアサイト グッドファインド</title>
+        <meta name="copyright" content="copyright(c)2012 SLOGAN All Rights Reserved.">
+    <meta name="keywords" content="ベンチャー,就職活動,就活,就職,コンサル,外資系">
+    <meta name="description" content="Goodfindは、未来のビジネスリーダーとなるハイポテンシャルな大学生/大学院生に、スキルアップ・成長機会や、就職活動・キャリア構築に関する情報提供をおこなうビジネススクールです。Goodfindでは、ロジカルシンキングやグループディスカッションなどのスキルアップセミナーや、企業分析やコンサルティングファーム・ベンチャーなどの会社説明会といったキャリアセミナー、などを提供しています。Goodfind 2014">
+
+    <meta property="fb:app_id" content="226757604016376">
+    <meta property="og:title" content="Goodfind 2014 次代を創るビジネスリーダー／アントレプレナーのためのキャリアサイト グッドファインド">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.goodfind.jp/2014/?">
+    <meta property="og:img" content="http://www.goodfind.jp/img/gf_logo.jpg">
+    <meta property="og:description" content="Goodfindは、未来のビジネスリーダーとなるハイポテンシャルな大学生/大学院生に、スキルアップ・成長機会や、就職活動・キャリア構築に関する情報提供をおこなうビジネススクールです。Goodfindでは、ロジカルシンキングやグループディスカッションなどのスキルアップセミナーや、企業分析やコンサルティングファーム・ベンチャーなどの会社説明会といったキャリアセミナー、などを提供しています。Goodfind 2014">
+    <meta property="og:site_name" content="Goodfind">
+    <link href="/2014/favicon.ico" type="img/x-icon" rel="icon" /><link href="/2014/favicon.ico" type="img/x-icon" rel="shortcut icon" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/oocss.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css" />
+    <script type="text/javascript" src="js/jQuery.js"></script>
+    <script type="text/javascript" src="js/import.js"></script>
+    <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="js/banner_scroll.js"></script>
+    <script type="text/javascript" src="js/booklist.js"></script>
+<script type="text/javascript" src="js/company.js"></script>    <!--[if lt IE 8]>
+    <script src="http://www.goodfind.jp/2013/js/ie8.js"></script>
+    <![endif]-->
+    </script>
+    <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    <script type="text/javascript" src="js/jqFancyTransitions.1.8.js"></script>
+    <script type="text/javascript" src="js/nicescroll.js"></script>
+
+<script>
+    $(function() {
+      $("#news_scroll").niceScroll({
+        cursorcolor:"#CCC", //スクロールバーのカラー
+        cursoropacitymax:1, //スクロールバーの最大透過
+        boxzoom:true //ズームを表示するかどうか
+    });
+</script>
+<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#main-nav li a.main-link").hover(function(){
+        $("#main-nav li a.close").fadeIn();
+        $("#main-nav li a.main-link").removeClass("active");                                                 
+        $(this).addClass("active");                                      
+        $("#sub-link-bar").animate({
+            height: "40px"                     
+        });
+        $(".sub-links").hide();
+        $(this).siblings(".sub-links").fadeIn();
+    });
+    $("#main-nav li a.close").click(function(){
+        $("#main-nav li a.main-link").removeClass("active");                                                                                     
+        $(".sub-links").fadeOut();
+        $("#sub-link-bar").animate({
+            height: "10px"                     
+        });     
+        $("#main-nav li a.close").fadeOut();
+    });
+    
+    
+});
+
+</script>
+    </head>
+
+<body id="body" onload="">
+<div id="top_bar">
+    <div class="top_bar_inner">
+        <div class="top_logo"><h1>ITエンジニアの就職・キャリア開発にはGoodfind Engineer グッドファインドエンジニア</h1></div>
+        <div class="top_bar_login"><a href="login" class="blue button large">ログイン</a></div>
+    </div>
+</div>
+<!-- ここまで上のライン -->
+<div id="top_wrap">
+    <div class="top_back">
+    </div>
+    <div class="top_front">
+        <div class="engineer_logo_top cf">
+            <div class="left">
+                <p class="mb5">
+                    <img src="img/goodfind_engineer.png" width="450px" alt="" />
+                </p>
+                <p class="mb10">ITエンジニアを目指す学生のための</p>
+                <p class="mb20">ヘッドハンティング Hunt me<br />キャリアコンサルティング<br />開発サポートプログラム</p>
+            </div>
+            <p class="left">Goodfind Engineer グッドファインドエンジニア</p>
+            <p class="left">ギークエンジニアから<br />未経験エンジニアまで<br />「創る人」こそ<br />最高のキャリア創りを</p>
+            
+        </div>
+    </div>
+</div>
+<!-- ここまでフィックスされた範囲 -->
+<div id="scrollable" role="main">
+<div id="scrollable_inner">
+    
+    
+    
+<!-- End sub-link-bar -->
+<div id="wrap">
+  <div id="main-handle">
+    <div class="roundfg">
+      <ul id="main-nav">
+
+        <li><a class="main-link" href="http://net.tutsplus.com/category/tutorials/">Seminar</a>
+          <ul class="sub-links seminar_g">
+            <li><a href="http://net.tutsplus.com/category/tutorials/design-tutorials/" title="View all posts filed under Design">Seminar</a> </li>
+            <li><a href="http://net.tutsplus.com/category/tutorials/html-css-techniques/" title="View all posts filed under HTML &amp; CSS">HTML &amp; CSS</a> </li>
+            <li><a href="http://net.tutsplus.com/category/tutorials/other/" title="View all posts filed under Other">Other</a> </li>
+   
+            
+          </ul>
+        </li>
+        <li><a class="main-link" href="http://net.tutsplus.com/category/articles/">Company list</a>
+          <ul class="sub-links Company_list_g">
+            <li ><a href="http://net.tutsplus.com/category/articles/general/" title="View all posts filed under General">General</a> </li>
+            <li><a href="http://net.tutsplus.com/category/articles/interviews/" title="View all posts filed under Interviews">Interviews</a> </li>
+            <li><a href="http://net.tutsplus.com/category/articles/news/" title="View all posts filed under News">News</a> </li>
+            <li><a href="http://net.tutsplus.com/category/articles/web-roundups/" title="View all posts filed under Web Roundups">Web Roundups</a> </li>
+          </ul>
+        </li>
+        <li><a class="main-link" href="http://net.tutsplus.com/category/freebies/">Hunt me</a>
+          <ul class="sub-links hunt_me_g">
+            <li><a href="http://net.tutsplus.com/category/freebies/books/" title="View all posts filed under Books">Books</a> </li>
+            <li><a href="http://net.tutsplus.com/category/freebies/icons-freebies/" title="View all posts filed under Icons">Icons</a> </li>
+            <li><a href="http://net.tutsplus.com/category/freebies/lightboxes/" title="View all posts filed under Lightboxes">Lightboxes</a> </li>
+            <li><a href="http://net.tutsplus.com/category/freebies/others/" title="View all posts filed under Others">Others</a> </li>
+            <li><a href="http://net.tutsplus.com/category/freebies/plugins/" title="View all posts filed under Plugins">Plugins</a> </li>
+            <li><a href="http://net.tutsplus.com/category/freebies/themes/" title="View all posts filed under Themes">Themes</a> </li>
+            <li><a href="http://net.tutsplus.com/category/freebies/tooltips/" title="View all posts filed under Tooltips">Tooltips</a> </li>
+          </ul>
+        </li>
+        <li><a class="main-link" href="http://net.tutsplus.com/category/videos/">Tech blog</a>
+            <ul class="sub-links tech_blog_g">
+            <li><a href="http://net.tutsplus.com/category/videos/screencasts/" title="Screencasts">Screencasts</a> </li>
+            </ul>
+        </li>
+         <li><a class="main-link" href="http://net.tutsplus.com/about">Skill up</a>
+            <ul class="sub-links skill_up_g">
+                <li><a href="http://net.tutsplus.com/about/" title="About">About</a></li> 
+                <li><a href="http://net.tutsplus.com/about/join-plus/" title="Join Plus">Join Plus</a></li> 
+                <li><a href="http://net.tutsplus.com/about/rss-feeds/" title="RSS Feeds">RSS Feeds</a></li> 
+                <li><a href="http://net.tutsplus.com/about/submissions/" title="Submit a Freebie">Submit a Freebie</a></li> 
+                <li><a href="http://net.tutsplus.com/about/terms/" title="Terms">Terms</a></li> 
+                <li><a href="http://net.tutsplus.com/about/write-a-tutorial/" title="Write a Tutorial">Write a Tutorial</a></li> 
+            </ul>
+        </li>
+        <li><a class="main-link" href="http://net.tutsplus.com/about">Contents</a>
+            <ul class="sub-links contents_g">
+                <li><a href="http://net.tutsplus.com/about/" title="About">About</a></li> 
+                <li><a href="http://net.tutsplus.com/about/join-plus/" title="Join Plus">Join Plus</a></li> 
+                <li><a href="http://net.tutsplus.com/about/rss-feeds/" title="RSS Feeds">RSS Feeds</a></li> 
+                <li><a href="http://net.tutsplus.com/about/submissions/" title="Submit a Freebie">Submit a Freebie</a></li> 
+                <li><a href="http://net.tutsplus.com/about/terms/" title="Terms">Terms</a></li> 
+                <li><a href="http://net.tutsplus.com/about/write-a-tutorial/" title="Write a Tutorial">Write a Tutorial</a></li> 
+            </ul>
+        </li>
+        <li><a class="main-link" href="http://net.tutsplus.com/about">Test</a>
+            <ul class="sub-links test_g">
+                <li><a href="http://net.tutsplus.com/about/" title="About">About</a></li> 
+                <li><a href="http://net.tutsplus.com/about/join-plus/" title="Join Plus">Join Plus</a></li> 
+                <li><a href="http://net.tutsplus.com/about/rss-feeds/" title="RSS Feeds">RSS Feeds</a></li> 
+                <li><a href="http://net.tutsplus.com/about/submissions/" title="Submit a Freebie">Submit a Freebie</a></li> 
+                <li><a href="http://net.tutsplus.com/about/terms/" title="Terms">Terms</a></li> 
+                <li><a href="http://net.tutsplus.com/about/write-a-tutorial/" title="Write a Tutorial">Write a Tutorial</a></li> 
+            </ul>
+        </li>
+
+      </ul>
+    </div>
+    <div id="sub-link-bar"> </div>
+    <!-- End roundfg -->
+    <b class="round"> <b class="round5"></b> <b class="round4"></b> <b class="round3"></b> <b class="round2"><b></b></b> <b class="round1"><b></b></b></b> </div>
+  <!-- End main-handle-->
+ </div>
+<!-- End wrap -->
+
+<div class="cf">
+    <ol id="pankuzu">
+    <li class="home"><a href="hoge">Home</a></li>
+    <li><a href="hoge">Hunt me</a></li>
+
+    </ol>
+</div>
+
+<div class="page1 left">
+    <div class="top_huntme_wrap cf ">
+<div class="top_bg pb35 oh">
+    <h2 class="full">Hunt Me</h2>
+        <div class="top_hunt_photo">
+            <p class="hunt_photo">
+                <p class="img"><img src="img/hunt_me_towa.jpg" width="680px" height="300px" alt="" /></p>
+                <div class="hunt_jQ">
+                    <p class="hunt_title">Hunt Me</p>
+                    <p class="hunt_para">エンジニアを目指す<br />学生のための<br />ヘッドハンティングサービス</p>
+                    
+                </div>
+            </p>
+            <a href="">More...</a>
+        </div>
+        <div class="top_hunt_photo cf dpl pos">
+            <p class="hunt_photo">
+                <p class="img"><img src="img/hunt_me_towa.jpg" width="680px" height="300px" alt="" /></p>
+                <div class="hunt_jQ">
+                    <p class="hunt_title">Hunt Me</p>
+                    <p class="hunt_para">Hunr Meはあなたの能力にマッチする最適な企業を紹介するシステムです。HUnt Meを使って自分の経験、スキルを存分にアピールできます。</p>
+                    
+                </div>
+            </p>
+            <a href="">More...</a>
+        </div>
+        
+        <div class="hunt_hd bgr">
+            <span class='neo29'>&nbsp;</span>
+            <a href=""><p class="photo_mini"><img src="" width="100px" height="70px" alt="" /></p>
+                <div class="left">
+                    <p class="hunt_mini_title">What Hunt Me</p>
+                    <p class="hunt_mini_detail">Hunt Meとは</p>
+                </div></a>
+        </div>
+        
+        <div class="hunt_hd2 bgr2">
+            <span class='neo29_2'>&nbsp;</span>
+            <a href=""><p class="photo_mini"><img src="" width="100px" height="70px" alt="" /></p>
+                <div class="left">
+                    <p class="hunt_mini_title">Register Hunt Me</p>
+                    <p class="hunt_mini_detail">Hunt Meを登録する。</p>
+                </div></a>
+        </div>
+            </div>
+    <div class="hunt_can top_bg">
+        <p class="hunt_me_do">What you can do on Hunt Me ?<span class="ja">Hunt Meでできること。</span></p>
+        <ul class="can_contents">
+            <li class="can_contents">
+                <p class="c_title">キャリア面談</p>
+                <p class="c_image"><img src="img/meeting6.png" width="200px" height="100px" alt="" /></p>
+                <p class="c_detail2">就職活動での悩みや企業情報について無料で相談できます。</p>
+            </li>
+            <li class="can_contents">
+                <p class="c_title">メッセージを待つ</p>
+                <p class="c_image2"><img src="img/message.png" width="200px" height="80px" alt="" /></p>
+                <p class="c_detail2">あなたの希望にあった企業からのメッセージを待ちましょう。</p>
+            </li>
+            <li class="can_contents mr0">
+                <p class="c_title">イベントやセミナーに参加</p>
+                <p class="c_image3"><img src="img/seminar_event2.png" width="200px" height="100px" alt="" /></p>
+                <p class="c_detail2">Hunt Meではあなたに見合ったイベントやセミナーを案内しています。希望のイベントがあったら参加しましょう。</p>
+            </li>
+        </ul>
+    </div>
+    <div class="member_company">
+        <p class="hunt_me_do">Companies<span class="ja">導入企業</span></p>
+        <ul class="member_company">
+            <li class="member_company">
+                <p class="logo"><img src="img/bnr_top_74.jpeg" width="132px" height="64px" alt="" /></p>
+                <p class="member_name">スローガン株式会社</p>
+                <a class="more" href="">More...</a>
+            </li>
+            <li class="member_company">
+                <p class="logo"><img src="" width="132px" height="64px" alt="" /></p>
+                <p class="member_name">スローガン株式会社</p>
+                <a class="more" href="">More...</a>
+            </li>
+            <li class="member_company">
+                <p class="logo"><img src="" width="132px" height="64px" alt="" /></p>
+                <p class="member_name">スローガン株式会社</p>
+                <a class="more" href="">More...</a>
+            </li>
+            <li class="member_company mr0">
+                <p class="logo"><img src="" width="132px" height="64px" alt="" /></p>
+                <p class="member_name">スローガン株式会社</p>
+                <a class="more" href="">More...</a>
+            </li>
+        </ul>
+        <ul class="member_company mb10">
+            <li class="member_company">
+                <p class="logo"><img src="img/jpeg-1.jpeg" width="132px"  alt="" /></p>
+                <p class="member_name">スローガン株式会社</p>
+                <a class="more" href="">More...</a>
+            </li>
+            <li class="member_company">
+                <p class="logo"><img src="img/jpeg-3.jpeg" width="132px"  alt="" /></p>
+                <p class="member_name">スローガン株式会社</p>
+                <a class="more" href="">More...</a>
+            </li>
+            <li class="member_company">
+                <p class="logo"><img src="img/jpeg-4.jpeg" width="132px"  alt="" /></p>
+                <p class="member_name">スローガン株式会社</p>
+                <a class="more" href="">More...</a>
+            </li>
+            <li class="member_company mr0">
+                <p class="logo"><img src="img/jpeg-5.jpeg" width="132px" alt="" /></p>
+                <p class="member_name">スローガン株式会社</p>
+                <a class="more" href="">More...</a>
+            </li>
+        </ul>
+    </div>
+    <p class="t_right mb30"><a href="">すべて見る</a></p>
+</div><!-- page1 -->
+</div>
+
+    <div class="picup_seminar">
+        <h2 class="full">Pick Up</h2>
+        <div class="picup_wrap">
+                        <p class="">
+                            <img src="img/jpeg-8.jpeg" alt="img1" width="312px"/>
+                        </p>
+                        
+                        <div class="scroll_arrow4">
+                            <a href=""></a>
+                        </div>
+                        <div class="scroll_arrow3">
+                            <a href=""></a>
+                        </div>
+                    </div>
+    </div>
+    <div class="picup_seminar">
+        <h2 class="full">Seminar</h2>
+        <div class="right_contents_wrapt">
+            <a href="">
+                <p class="day_top cf"><span class="seminar_day">7/26(土)</span><span class="seminar_time">19:00-20:00</span></p>
+                <div class="right_content cf pb10">
+                    <p><img src="img/seminar/seminar_1.jpeg" alt="" height="60px" width="60px" /></p>
+                    <p class="right_seminar_name">伊藤忠商事出身・現在はベンチャーで働く若手ビジねすまんの限定抗議です。</p>
+                    
+                </div></a>
+                
+                
+
+        </div>
+    </div>
+    
+
+        <div id="page_1">
+    <div class="top_contents_wrap">
+            <h2 class="full">Contents</h2>
+                <div>
+                    <div id="engineer_seminar" class="top_contents mr15">
+                        <div class="top_contents_hidden">
+                    <p class="c_name">engineer seminar</p>
+                    <p class="c_detail">モバイルビジネスのコンサルから、次々と事業を創造するビジネスのプロが集う次世代 の経営人材輩出企業。</p>
+                    <p class="c_continue"><a href="">続きを見る</a></p>
+                        </div>
+                        <a class="more" href=""></a>
+                    </div>
+                    <div id="company_list" class="top_contents mr15">
+                        <div class="top_contents_hidden">
+                    <p class="c_name">engineer seminar</p>
+                    <p class="c_detail">モバイルビジネスのコンサルから、次々と事業を創造するビジネスのプロが集う次世代 の経営人材輩出企業。</p>
+                    <p class="c_continue"><a href="">続きを見る</a></p>
+                        </div>
+                        <a class="more" href=""></a>
+                    </div>
+                    <div id="hunt_me" class="top_contents">
+                        <div class="top_contents_hidden">
+                    <p class="c_name">engineer seminar</p>
+                    <p class="c_detail">モバイルビジネスのコンサルから、次々と事業を創造するビジネスのプロが集う次世代 の経営人材輩出企業。</p>
+                    <p class="c_continue"><a href="">続きを見る</a></p>
+                        </div>
+                        <a class="more" href=""></a>
+                    </div>
+                </div>
+                <div>
+                    <div id="tech_blog" class="top_contents mr15">
+                        <div class="top_contents_hidden">
+                    <p class="c_name">engineer seminar</p>
+                    <p class="c_detail">モバイルビジネスのコンサルから、次々と事業を創造するビジネスのプロが集う次世代 の経営人材輩出企業。</p>
+                    <p class="c_continue"><a href="">続きを見る</a></p>
+                </div>
+                <a class="more" href=""></a>
+                    </div>
+                    <div id="career_pass" class="top_contents mr15">
+                        <div class="top_contents_hidden">
+                    <p class="c_name">engineer seminar</p>
+                    <p class="c_detail">モバイルビジネスのコンサルから、次々と事業を創造するビジネスのプロが集う次世代 の経営人材輩出企業。</p>
+                    <p class="c_continue"><a href="">続きを見る</a></p>
+                </div>
+                <a class="more" href=""></a>
+                    </div>
+                    <div id="engineer_test" class="top_contents">
+                        <div class="top_contents_hidden">
+                    <p class="c_name">engineer seminar</p>
+                    <p class="c_detail">モバイルビジネスのコンサルから、次々と事業を創造するビジネスのプロが集う次世代 の経営人材輩出企業。</p>
+                    <p class="c_continue"><a href="">続きを見る</a></p>
+                </div>
+                <a class="more" href=""></a>
+                    </div>
+                </div>
+                
+        </div><!-- top_contents_wrap -->
+        
+
+
+    
+</div>
+</div><!-- ここまでがコンテンツ部分です。 -->
+
+
+    <div class="footer">
+                                <div id="footer_container" class="clr">
+                <div class="footer_section_left">
+                    <div class="footer_section_body">
+                        <h3>運営会社について</h3>
+                        <ul>
+                            <li><a href="http://www.slogan.jp/" target="_blank">スローガン株式会社について</a></li>
+                            <li><a href="https://www.goodfind.jp/2014/privacy">個人情報保護方針</a></li>
+                            <li><a href="https://www.goodfind.jp/2014/terms">利用規約</a></li>
+                            <li><a href="https://www.goodfind.jp/2014/advertise">ページリンク・広告掲載について</a></li>
+                            <li><a href="http://www.slogan.jp/recruit/" target="_blank">スタッフ募集</a></li>
+                        </ul>
+
+                        <ul>
+                        <li><a href="http://www.slogan.jp/inquiry/index.html" target="_blank">Goodfindへの掲載をご希望・ご検討している<br>企業様はこちら</a></li>
+                        </ul>
+                    </div><!--footer_section_body -->
+                </div><!--footer_section_left -->
+
+                <div class="footer_section_right">
+                    <div class="footer_section_body">
+                    </div><!--footer_section_body -->
+                </div><!--footer_section -->
+            </div><!--footer_container -->
+
+            <div id="copyright" class="clr">
+            <!-- ▼▼ copyrihgt ▼▼ -->
+                <p id="top_navi_link">
+                    <a href="https://www.goodfind.jp/2014/sitemap">サイトマップ</a>／
+                    <a href="https://www.goodfind.jp/2014/faq">よくある質問</a>／
+                    <a href="https://www.goodfind.jp/2014/contact">お問い合わせ</a>
+                </p>
+                <p>Copyright © 2006-2012 SLOGAN Inc. All Rights Reserved.</p>
+            <!-- ▲▲ copyrihgt ▲▲ -->
+            </div><!--copyright-->
+    </div>
+</div>
+</body>
+
+</html>
