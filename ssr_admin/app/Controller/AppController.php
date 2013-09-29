@@ -53,6 +53,7 @@ class AppController extends Controller
     {
         App::uses('Sanitize', 'Utility');
 
+
         /*ユーザー情報埋め込み*/
         $this->me = $this->_getMe();
         $this->set('me', $this->me);
@@ -104,11 +105,10 @@ class AppController extends Controller
      */
     private function _getMe()
     {
-
         return array(
             'is_login' => $this->Auth->loggedIn(),
             'token' => session_id(),
-            'User' => $this->Auth->user()
+            'Administrator' => $this->Auth->user()
         );
     }
 

@@ -77,6 +77,7 @@ class AppController extends Controller
                 //echo "POSTを送信する際はトークンも一緒にhiddenパラメタで送って下さい。name=token, value=session_id()を指定して下さい。";
             }
         }
+
     }
 
     /**

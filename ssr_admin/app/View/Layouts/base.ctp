@@ -35,8 +35,8 @@
             </a>
             <ul class="dropdown-menu">
               <li><a href="/<?php echo $base_dir;?>/student">在学生管理 Top</a></li>
+              <li><a href="/<?php echo $base_dir;?>/student/search">在学生を検索</a></li>
               <li><a href="/<?php echo $base_dir;?>/student/add">在学生を新規登録</a></li>
-              <li><a href="/<?php echo $base_dir;?>/student/analysis">統計分析</a></li>
             </ul>
           </li>
           <li>
@@ -47,10 +47,10 @@
             </a>
             <ul class="dropdown-menu">
               <li><a href="/<?php echo $base_dir;?>/completion">修了生管理 Top</a></li>
+              <li><a href="/<?php echo $base_dir;?>/completion/search">修了生管理を検索</a></li>
               <li><a href="/<?php echo $base_dir;?>/completion/student">修了生を新規登録</a></li>
               <li><a href="/<?php echo $base_dir;?>/completion/create_certification">修了証明書発行依頼情報</a></li>
-              <li><a href="/<?php echo $base_dir;?>/completion/notify_event">イベント告知情報</a></li>
-              <li><a href="/<?php echo $base_dir;?>/completion/analysis">統計分析</a></li>
+              <li><a href="/<?php echo $base_dir;?>/completion/event">イベント告知情報</a></li>
             </ul>
           </li>
           <li class="dropdown">

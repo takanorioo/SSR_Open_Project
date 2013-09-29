@@ -209,6 +209,73 @@ class CompletionController extends AppController {
     }
 
     /**
+     * serach
+     * @param:
+     * @author: T.Kobashi
+     * @since: 1.0.0
+     */
+    public function search()
+    {
+        if(count($this->request->query) > 0) {
+
+            // 検索ワードの引き継ぎ
+            $this->request->data['Search'] = $this->request->query;
+            $this->set('query', $this->request->query);
+
+
+            // 検索条件の作成
+            $qr = $this->request->query;
+
+            $conditions = array();
+
+            //在学生の条件
+            $conditions = array_merge_recursive($conditions, array('AND' => array(
+                'NOT' => array('Student.id' => null),
+                'NOT' => array('Completion.id' => null),
+                'UserConfidential.delete' => '0',
+            )));
+
+            if(isset($qr['name']) && $qr['name'] !== "") {
+                $conditions = array_merge_recursive($conditions, array('AND' => array(
+                    'User.name LIKE' => '%'.$qr['name'].'%',
+                )));
+            }
+            if(isset($qr['number']) && $qr['number'] !== "") {
+                $conditions = array_merge_recursive($conditions, array('AND' => array(
+                    'Student.number LIKE' => '%'.$qr['number'].'%',
+                )));
+            }
+            if(isset($qr['grade']) && is_array($qr['grade'])) {
+                $conditions = array_merge_recursive($conditions, array('AND' => array(
+                    'Student.grade' => array_values($qr['grade'])
+                )));
+            }
+            if(isset($qr['gender']) && is_array($qr['gender'])) {
+                $conditions = array_merge_recursive($conditions, array('AND' => array(
+                    'User.gender' => array_values($qr['gender'])
+                )));
+            }
+            if(isset($qr['department']) && is_array($qr['department'])) {
+                $conditions = array_merge_recursive($conditions, array('AND' => array(
+                    'Student.department' => array_values($qr['department'])
+                )));
+            }
+            if(isset($qr['major']) && is_array($qr['major'])) {
+                $conditions = array_merge_recursive($conditions, array('AND' => array(
+                    'Student.major' => array_values($qr['major'])
+                )));
+            }
+        } else {
+            $conditions = array('User.id' => -1);
+        }
+
+        //ユーザ情報の取得
+        $users = $this->User->getCompletionUsersByConditions($conditions);
+        $this->set('users', $users);
+
+    }
+
+    /**
      * create_certification
      * @param:
      * @author: T.Kobashi
@@ -219,25 +286,4 @@ class CompletionController extends AppController {
 
     }
 
-    /**
-     * notify_event
-     * @param:
-     * @author: T.Kobashi
-     * @since: 1.0.0
-     */
-    public function notify_event()
-    {
-
-    }
-
-    /**
-     * show
-     * @param:
-     * @author: T.Kobashi
-     * @since: 1.0.0
-     */
-    public function analysis()
-    {
-
-    }
 }

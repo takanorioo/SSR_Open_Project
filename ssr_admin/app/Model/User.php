@@ -45,7 +45,6 @@ class User extends AppModel
     );
 
 
-
     public function getStudentUser($user_id)
     {
         $result = $this->find('first', array(
@@ -65,6 +64,14 @@ class User extends AppModel
                 'Completion.id' => null,
                 'UserConfidential.delete' => '0',
             ),
+        ));
+        return $result;
+    }
+
+    public function getStudentUsersByConditions($condtions)
+    {
+        $result = $this->find('all', array(
+            'conditions' => $condtions,
         ));
         return $result;
     }
@@ -93,5 +100,15 @@ class User extends AppModel
         ));
         return $result;
     }
+
+    public function getCompletionUsersByConditions($condtions)
+    {
+        $result = $this->find('all', array(
+            'conditions' => $condtions,
+            'recursive' => 2,
+        ));
+        return $result;
+    }
+
 
 }
