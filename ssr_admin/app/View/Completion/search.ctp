@@ -43,14 +43,14 @@
 <div class="container">
     <?php echo  $this->Session->flash(); ?>
     <h2>検索条件</h2>
-    <?= $this->Form->create(null, array('type' => 'GET', 'url' => array('action' => 'search'), 'class' => 'well')); ?>
+    <?php echo $this->Form->create(null, array('type' => 'GET', 'url' => array('action' => 'search'), 'class' => 'well')); ?>
     <div class="row">
         <div class="span5">
-            <?= $this->Form->input('Search.name', array('label' => '名前')) ?>
+            <?php echo $this->Form->input('Search.name', array('label' => '名前')) ?>
             <br>
-            <?= $this->Form->input('Search.number', array('label' => '学籍番号')) ?>
+            <?php echo $this->Form->input('Search.number', array('label' => '学籍番号')) ?>
             <br>
-            <?= $this->Form->input('Search.gender', array(
+            <?php echo $this->Form->input('Search.gender', array(
                 'type' => 'select',
                 'multiple' => 'checkbox',
                 'label' => '性別',
@@ -58,7 +58,7 @@
                 ))
             ?>
             <br>
-            <?= $this->Form->input('Search.grade', array(
+            <?php echo $this->Form->input('Search.grade', array(
                 'type' => 'select',
                 'multiple' => 'checkbox',
                 'label' => '学年',
@@ -67,7 +67,7 @@
             ?>
         </div>
         <div class="span5">
-            <?= $this->Form->input('Search.department', array(
+            <?php echo $this->Form->input('Search.department', array(
                 'type' => 'select',
                 'multiple' => 'checkbox',
                 'label' => '学部（研究科）',
@@ -75,7 +75,7 @@
                 ))
             ?>
             <br>
-             <?= $this->Form->input('Search.major', array(
+             <?php echo $this->Form->input('Search.major', array(
                 'type' => 'select',
                 'multiple' => 'checkbox',
                 'label' => '学部（研究科）',
@@ -88,8 +88,8 @@
 <div class="row">
     <div class="button_section" style="margin-left: 450px;">
         <div class="button_section2 span3" style="margin-bottom: 30px;">
-        <?= $this->Form->button('検索する', array('class' => 'btn btn-primary span3')); ?>
+        <?php echo $this->Form->button('検索する', array('class' => 'btn btn-primary span3')); ?>
         </div>
     </div>
 </div>
-<?= $this->Form->end() ?>
+<?php echo $this->Form->end() ?>
