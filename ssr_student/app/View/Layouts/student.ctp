@@ -30,13 +30,14 @@
         <ul class="nav pull-right">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Menu
+              メニュー
               <span class="caret"> </span>
             </a>
             <ul class="dropdown-menu">
-              <li><a href="/<?php echo $base_dir;?>/">Top</a></li>
-              <li><a href="/<?php echo $base_dir;?>/student/show">Show Your Account</a></li>
-              <li><a href="/<?php echo $base_dir;?>/student/edit">Edit Account</a></li>
+              <li><a href="/<?php echo $base_dir;?>/">Topページ</a></li>
+              <li><a href="/<?php echo $base_dir;?>/student/show">アカウント情報を見る</a></li>
+              <li><a href="/<?php echo $base_dir;?>/student/edit">アカウント情報を編集する</a></li>
+              <li><a href="/<?php echo $base_dir;?>/student/password">パスワードを変更する</a></li>
             </ul>
           </li>
           <li>

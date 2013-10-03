@@ -4,7 +4,7 @@
 class User extends AppModel
 {
     public $name = 'User';
-    public $hasOne = array('Student','Completion','UserConfidential');
+    public $hasOne = array('Student','Completion','UserConfidential','Certification');
     public $validate = array(
         'name' => array(
             'notEmpty' => array(
@@ -109,6 +109,4 @@ class User extends AppModel
         ));
         return $result;
     }
-
-
 }

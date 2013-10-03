@@ -4,6 +4,8 @@
 class User extends AppModel {
     public $name = 'User';
     public $hasOne = array('Student','Completion');
+    public $hasMany = array('EventsUser');
+
     public $validate = array(
         'adress' => array(
             'notEmpty' => array(
@@ -39,5 +41,4 @@ class User extends AppModel {
         ));
         return $result;
     }
-
 }

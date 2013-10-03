@@ -3,6 +3,7 @@
     <?php echo  $this->Session->flash(); ?>
     <h2>イベント参加者一覧</h2>
     <div class="row">
+    <?php if(count($users) > 0): ?>
       <table class="table table-striped">
         <thead>
               <tr>
@@ -29,5 +30,14 @@
               <?php endfor; ?>
             </tbody>
       </table>
+    <?php else: ?>
+      <h4 style="text-align: center;padding: 20px;">※参加者はいません</h4>
+    <?php endif; ?>
+    </div>
+        <div class="button_section">
+        <div class="button_section2 span10"style="margin-bottom: 30px;margin-left: 270px;">
+            <a href="/<?php echo $base_dir;?>/event/edit/<?php echo h($event_id); ?>" class="btn btn-primary span2">イベントを編集する</a>
+            <a href="/<?php echo $base_dir;?>/event/delete/<?php echo h($event_id); ?>" class="btn btn-danger span2">イベントを削除する</a>
+        </div>
     </div>
   </div>

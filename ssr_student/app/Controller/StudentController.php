@@ -12,7 +12,7 @@ class StudentController extends AppController
 {
 
     public $name = 'Student';
-    public $uses = array('User','Student');
+    public $uses = array('User','Student','UserConfidential');
     public $helpers = array('Html', 'Form',);
     public $layout = 'student';
 
@@ -114,5 +114,47 @@ class StudentController extends AppController
 
         $this->Session->setFlash('You successfully edit your account.', 'default', array('class' => 'alert alert-success'));
         $this->redirect(array('controller' => 'Student', 'action' => 'show'));
+    }
+
+    /**
+     * password
+     * @param:
+     * @author: T.Kobashi
+     * @since: 1.0.0
+     */
+    public function password()
+    {
+
+        if ($this->request->is('Post') && !empty($this->request->data['UserConfidential'])) {
+
+
+            $data['UserConfidential']['old_password'] = $this->request->data['UserConfidential']['old_password'];
+            $data['UserConfidential']['password'] = $this->request->data['UserConfidential']['password'];
+
+            $user = $this->UserConfidential->findByUserId($this->me['User']['id']);
+
+            if ($user['UserConfidential']['password'] !== $this->Auth->password($data['UserConfidential']['old_password'])) {
+                // DBに保存されたパスワードと入力パスワードが不一致
+                $this->Session->setFlash('現在のパスワードが一致しません', 'default', array('class' => 'alert alert-danger'));
+                $this->redirect(array('controller' => 'Student', 'action' => 'password'));
+            }
+
+            //パスワードのハッシュ
+            $data['UserConfidential']['password'] = AuthComponent::password($data['UserConfidential']['password']);
+
+            // トランザクション処理始め
+            $this->UserConfidential->begin();
+
+            if (!$this->UserConfidential->save($data)) {
+                $this->UserConfidential->rollback();
+                throw new BadRequestException();
+            }
+
+            $this->UserConfidential->commit();
+            // トランザクション処理終わり
+
+            $this->Session->setFlash('You successfully chage your password.', 'default', array('class' => 'alert alert-success'));
+            $this->redirect(array('controller' => 'student', 'action' => 'password'));
+        }
     }
 }

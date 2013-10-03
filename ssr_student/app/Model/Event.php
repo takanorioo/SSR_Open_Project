@@ -2,8 +2,11 @@
 
 
 class Event extends AppModel {
+
     public $name = 'Event';
+    // public $hasOne = array('EventsUser');
     public $hasMany = array('EventsUser');
+
     public $validate = array(
          'name' => array(
             'notEmpty' => array(
@@ -25,17 +28,7 @@ class Event extends AppModel {
         ),
     );
 
-    public function getEvent($event_id)
-    {
-        $result = $this->find('first', array(
-            'conditions' => array(
-                'Event.id' => $event_id,
-            ),
-        ));
-        return $result;
-    }
-
-    public function getEvents()
+    public function getEvents($user_id)
     {
         $result = $this->find('all', array(
             'conditions' => array(
@@ -44,17 +37,4 @@ class Event extends AppModel {
         ));
         return $result;
     }
-
-    public function getEventUsers($event_id)
-    {
-        $result = $this->find('first', array(
-            'conditions' => array(
-                'Event.id' => $event_id,
-            ),
-            'recursive' => 4,
-        ));
-        return $result['EventsUser'];
-    }
-
-
 }

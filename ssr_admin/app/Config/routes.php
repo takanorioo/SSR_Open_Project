@@ -38,12 +38,6 @@
     /* TopController */
     Router::connect('/', array('controller' => 'Top', 'action' => 'index'));
 
-    /* TopController */
-    Router::connect('/completion/event', array('controller' => 'Event', 'action' => 'index'));
-    Router::connect('/completion/event/show/:id', array('controller' => 'Event', 'action' => 'show'));
-    Router::connect('/completion/event/add', array('controller' => 'Event', 'action' => 'add'));
-    Router::connect('/completion/event/delete/:id', array('controller' => 'Event', 'action' => 'delete'));
-
 
 /**
  * Load all plugin routes.  See the CakePlugin documentation on

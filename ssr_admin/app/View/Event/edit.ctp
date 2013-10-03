@@ -1,7 +1,7 @@
 
 <div class="container">
     <?php echo  $this->Session->flash(); ?>
-    <h2>新規イベント追加</h2>
+    <h2>イベントの編集</h2>
 
     <?php echo $this->Form->create(); ?>
         <div>
@@ -39,14 +39,14 @@
                             <?php endif; ?>
                         </td>
                         <td>
-                        	<p 	style="color: gray;">　ex ) 2013-11-30</p>
+                            <p  style="color: gray;">　ex ) 2013-11-30</p>
                         </td>
                     </tr>
                 </table>
             </div>
             <div class="row" style="padding-top: 30px;">
                 <p>
-                    <?php echo $this->Form->submit('追加する', array('class' => 'btn btn-primary', 'name' => 'confirm', 'div' => false)); ?>
+                    <?php echo $this->Form->submit('編集を完了する', array('class' => 'btn btn-primary', 'name' => 'confirm', 'div' => false)); ?>
                     <input type="hidden" name="token" value="<?php echo session_id();?>">
                 </p>
             </div>

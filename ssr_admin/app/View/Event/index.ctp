@@ -4,7 +4,7 @@
     <div class="row">
         <div class="button_section">
           <div class="button_section2 span12"style="margin-bottom: 30px">
-              <a href="/<?php echo $base_dir;?>/completion/event/add" class="btn btn-primary span2" style="float: right;">新規イベントの登録</a>
+              <a href="/<?php echo $base_dir;?>/event/add" class="btn btn-primary span2" style="float: right;">新規イベントの登録</a>
           </div>
         </div>
       <table class="table table-striped">
@@ -19,13 +19,14 @@
             <tbody>
               <?php for($i = 0; $i < count($events); $i++ ): ?>
               <tr>
-                <td><a href="/<?php echo $base_dir;?>/completion/event/show/<?php echo h($events[$i]['Event']['id']) ?>"><?php echo h($events[$i]['Event']['name']) ?></a></td>
+                <td><a href="/<?php echo $base_dir;?>/event/show/<?php echo h($events[$i]['Event']['id']) ?>"><?php echo h($events[$i]['Event']['name']) ?></a></td>
                 <td><?php echo h($events[$i]['Event']['location']) ?></td>
                 <td><?php echo h($events[$i]['Event']['date']) ?></td>
-                <td><?php echo h(count($events[$i]['CompletionEvent'])) ?>人</td>
+                <td><?php echo h(count($events[$i]['EventsUser'])) ?>人</td>
               <tr>
               <?php endfor; ?>
             </tbody>
       </table>
     </div>
+
   </div>

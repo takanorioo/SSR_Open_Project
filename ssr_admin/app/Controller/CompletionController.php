@@ -11,7 +11,7 @@ App::uses('AppController', 'Controller');
 class CompletionController extends AppController {
 
     public $name = 'Completion';
-    public $uses = array('User','Student','Completion','GraduationCourse');
+    public $uses = array('User','Student','Completion','GraduationCourse','UserConfidential','Certification');
     public $helpers = array('Html', 'Form',);
     public $layout = 'base';
 
@@ -276,14 +276,16 @@ class CompletionController extends AppController {
     }
 
     /**
-     * create_certification
+     * certification
      * @param:
      * @author: T.Kobashi
      * @since: 1.0.0
      */
-    public function create_certification()
+    public function certification()
     {
-
+        //ユーザ情報の取得
+        $users = $this->Certification->getCertification();
+        $this->set('users', $users);
     }
 
 }

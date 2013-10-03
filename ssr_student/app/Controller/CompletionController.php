@@ -12,7 +12,7 @@ class CompletionController extends AppController
 {
 
     public $name = 'Completion';
-    public $uses = array('User','Student','Completion','GraduationCourse');
+    public $uses = array('User','Student','Completion','GraduationCourse','UserConfidential','Certification');
     public $helpers = array('Html', 'Form',);
     public $layout = 'completion';
 
@@ -139,6 +139,48 @@ class CompletionController extends AppController
     }
 
     /**
+     * password
+     * @param:
+     * @author: T.Kobashi
+     * @since: 1.0.0
+     */
+    public function password()
+    {
+
+        if ($this->request->is('Post') && !empty($this->request->data['UserConfidential'])) {
+
+
+            $data['UserConfidential']['old_password'] = $this->request->data['UserConfidential']['old_password'];
+            $data['UserConfidential']['password'] = $this->request->data['UserConfidential']['password'];
+
+            $user = $this->UserConfidential->findByUserId($this->me['User']['id']);
+
+            if ($user['UserConfidential']['password'] !== $this->Auth->password($data['UserConfidential']['old_password'])) {
+                // DBに保存されたパスワードと入力パスワードが不一致
+                $this->Session->setFlash('現在のパスワードが一致しません', 'default', array('class' => 'alert alert-danger'));
+                $this->redirect(array('controller' => 'Completion', 'action' => 'password'));
+            }
+
+            //パスワードのハッシュ
+            $data['UserConfidential']['password'] = AuthComponent::password($data['UserConfidential']['password']);
+
+            // トランザクション処理始め
+            $this->UserConfidential->begin();
+
+            if (!$this->UserConfidential->save($data)) {
+                $this->UserConfidential->rollback();
+                throw new BadRequestException();
+            }
+
+            $this->UserConfidential->commit();
+            // トランザクション処理終わり
+
+            $this->Session->setFlash('You successfully chage your password.', 'default', array('class' => 'alert alert-success'));
+            $this->redirect(array('controller' => 'Completion', 'action' => 'password'));
+        }
+    }
+
+    /**
      * create_certification
      * @param:
      * @author: T.Kobashi
@@ -146,7 +188,35 @@ class CompletionController extends AppController
      */
     public function create_certification()
     {
+        if ($this->request->is('Post') && !empty($this->request->data['Certification'])) {
 
+            $data['Certification'] = $this->request->data['Certification'];
+            $data['Certification']['user_id'] = $this->me['User']['id'];
+            $data['Certification']['completion_day'] = $this->request->data['Certification']['completion_day']['year'];
+
+            // バリデーション処理
+            $this->Certification->set($data['Certification']);
+            $validates = $this->Certification->validates();
+
+            if (!$validates) {
+                $this->Session->setFlash('Validation Error. Please Confirm Input Values', 'default', array('class' => 'alert alert-error'));
+                $this->redirect(array('controller' => 'Completion', 'action' => 'create_certification'));
+            }
+
+             // トランザクション処理始め
+            $this->Certification->begin();
+
+            if (!$this->Certification->save($data)) {
+                $this->Certification->rollback();
+                throw new BadRequestException();
+            }
+
+            $this->Certification->commit();
+            // トランザクション処理終わり
+
+            $this->Session->setFlash('大学に証明書発行依頼をだしました', 'default', array('class' => 'alert alert-success'));
+            $this->redirect(array('controller' => 'Completion', 'action' => 'create_certification'));
+        }
     }
 
     /**

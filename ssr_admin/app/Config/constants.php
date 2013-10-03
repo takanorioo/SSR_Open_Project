@@ -49,6 +49,25 @@ $BUSINESSTYPE = array(
 );
 
 
+$CERTIFICATION_TYPE = array(
+    "0" => "学士",
+    "1" => "博士前期",
+    "2" => "博士後期",
+);
 
-$this->set(compact('USERTYPE','GENDER','GRADE','DEPARTMENT','MAJOR','BUSINESSTYPE'));
+$CERTIFICATION_NUMBER = array(
+    "1" => "1",
+    "2" => "2",
+    "3" => "3",
+    "4" => "4",
+    "5" => "5",
+    "6" => "6",
+    "7" => "7",
+    "8" => "8",
+    "9" => "9",
+    "10" => "10",
+
+);
+
+$this->set(compact('USERTYPE','GENDER','GRADE','DEPARTMENT','MAJOR','BUSINESSTYPE','CERTIFICATION_TYPE','CERTIFICATION_NUMBER'));
 

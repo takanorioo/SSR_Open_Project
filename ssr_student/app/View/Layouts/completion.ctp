@@ -30,15 +30,16 @@
         <ul class="nav pull-right">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Menu
+              メニュー
               <span class="caret"> </span>
             </a>
             <ul class="dropdown-menu">
-              <li><a href="/<?php echo $base_dir;?>/">Top</a></li>
-              <li><a href="/<?php echo $base_dir;?>/completion/show">Show Your Account</a></li>
-              <li><a href="/<?php echo $base_dir;?>/completion/edit">Edit Account</a></li>
-              <li><a href="/<?php echo $base_dir;?>/completion/create_certification">Create Yout Certification</a></li>
-              <li><a href="/<?php echo $base_dir;?>/completion/notify_event">Notify Event</a></li>
+              <li><a href="/<?php echo $base_dir;?>/">Topページ</a></li>
+              <li><a href="/<?php echo $base_dir;?>/completion/show">アカウント情報を見る</a></li>
+              <li><a href="/<?php echo $base_dir;?>/completion/edit">アカウント情報を編集する</a></li>
+              <li><a href="/<?php echo $base_dir;?>/completion/password">パスワードを変更する</a></li>
+              <li><a href="/<?php echo $base_dir;?>/completion/create_certification">証明書発行依頼をする</a></li>
+              <li><a href="/<?php echo $base_dir;?>/event">イベント情報を見る</a></li>
             </ul>
           </li>
           <li>

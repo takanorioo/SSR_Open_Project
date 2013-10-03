@@ -10,7 +10,6 @@
 App::uses('AppController', 'Controller');
 class StudentController extends AppController
 {
-
     public $name = 'Student';
     public $uses = array('User','Student','UserConfidential');
     public $helpers = array('Html', 'Form',);
@@ -76,10 +75,13 @@ class StudentController extends AppController
              // バリデーション処理
             $this->User->set($data['User']);
             $this->Student->set($data['Student']);
+            $this->UserConfidential->set($data['UserConfidential']);
 
             $user_validates = $this->User->validates();
             $student_validates = $this->Student->validates();
-            if (!$user_validates || !$student_validates) {
+            $user_confidential_validates = $this->UserConfidential->validates();
+
+            if (!$user_validates || !$student_validates || !$user_confidential_validates) {
                 $this->Session->setFlash('Validation Error. Please Confirm Input Values', 'default', array('class' => 'alert alert-error'));
                 $this->redirect(array('controller' => 'Student', 'action' => 'add'));
             }
@@ -278,6 +280,4 @@ class StudentController extends AppController
     {
 
     }
-
-
 }

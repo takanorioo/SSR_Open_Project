@@ -92,9 +92,8 @@
     </table>
 
     <div class="button_section">
-        <div class="button_section2 span10"style="margin-bottom: 30px;margin-left: 270px;">
+        <div class="button_section2 span10"style="margin-bottom: 30px;margin-left: 370px;">
             <a href="/<?php echo $base_dir;?>/completion/edit/<?php echo h($user['User']['id']); ?>" class="btn btn-primary span2">編集する</a>
-            <a href="/<?php echo $base_dir;?>/completion/create_certification/<?php echo h($user['User']['id']); ?>" class="btn btn-info span2">修了書を発行する</a>
         </div>
     </div>
 </div>
