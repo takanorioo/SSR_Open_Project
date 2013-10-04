@@ -11,12 +11,6 @@ class Certification extends AppModel {
                 'message' => ''
             ),
         ),
-        'completion_day' => array(
-            'notEmpty' => array(
-                'rule' => 'notEmpty',
-                'message' => ''
-            ),
-        ),
         'count' => array(
             'notEmpty' => array(
                 'rule' => 'notEmpty',

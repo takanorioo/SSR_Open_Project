@@ -69,7 +69,7 @@
                     <tr <?php if (!empty($this->validationErrors['User']['birthday'])) echo 'class="error"';?>>
                         <th><b>生年月日</b></th>
                         <td>
-                            <?php echo $this->Form->input('User.birthday', array('label' => false, 'div' => false, 'id' => false, 'type' => 'text', 'class' => 'span6', 'error'=>false)); ?>
+                            <?php echo $this->Form->input('User.birthday', array('label' => false, 'div' => false, 'id' => 'date', 'type' => 'text', 'class' => 'span2 date', 'error'=>false)); ?>
                             <?php if (!empty($this->validationErrors['User']['birthday'])): ?>
                                 <span class="error"><?php echo $this->Form->error('User.birthday');?></span>
                             <?php endif; ?>
@@ -150,7 +150,7 @@
                     <tr <?php if (!empty($this->validationErrors['Student']['entrance_day'])) echo 'class="error"';?>>
                         <th><b>入学日</b></th>
                         <td>
-                            <?php echo $this->Form->input('Student.entrance_day', array('label' => false, 'div' => false, 'id' => false, 'type' => 'text', 'class' => 'span6', 'error'=>false)); ?>
+                            <?php echo $this->Form->input('Student.entrance_day', array('label' => false, 'div' => false, 'id' => 'date', 'type' => 'text', 'class' => 'span2 date', 'error'=>false)); ?>
                             <?php if (!empty($this->validationErrors['Student']['entrance_day'])): ?>
                                 <span class="error"><?php echo $this->Form->error('Student.entrance_day');?></span>
                             <?php endif; ?>

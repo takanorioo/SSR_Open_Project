@@ -12,14 +12,22 @@
         echo $this->Html->css(array('bootstrap-responsive.min.css'));
         echo $this->Html->css(array('bootstrap.min'));
         echo $this->Html->css(array('base'));
+        echo $this->Html->css(array('jquery.ui.all'));
 
         echo $this->Html->script(array('jquery-1.7.1.min'));
         echo $this->Html->script(array('bootstrap.min'));
+        echo $this->Html->script(array('jquery.ui.core.min'));
+        echo $this->Html->script(array('jquery.ui.datepicker.min'));
+        echo $this->Html->script(array('jquery.ui.datepicker-ja'));
 
         echo $this->fetch('css');
         echo $this->fetch('script');
     ?>
-
+    <script>
+      $(function() {
+        $('.date').datepicker();
+    });
+    </script>
 
 </head>
 <body style = "padding-top:70px">

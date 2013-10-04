@@ -21,15 +21,6 @@
                             <?php endif; ?>
                         </td>
                     </tr>
-                    <tr <?php if (!empty($this->validationErrors['Certification']['completion_day'])) echo 'class="error"';?>>
-                        <th><b>修了年度</b></th>
-                        <td>
-                            <?php echo $this->Form->year('Certification.completion_day', 1990, 2015, array('label' => false, 'div' => false, 'id' => false, 'type' => 'select', 'class' => 'span2', 'error'=>false, 'orderYear' => 'asc', 'empty' => '----')); ?> 年
-                            <?php if (!empty($this->validationErrors['Certification']['completion_day'])): ?>
-                                <span class="error"><?php echo $this->Form->error('Certification.completion_day');?></span>
-                            <?php endif; ?>
-                        </td>
-                    </tr>
                     <tr <?php if (!empty($this->validationErrors['Certification']['count'])) echo 'class="error"';?>>
                         <th><b>発行枚数</b></th>
                         <td>

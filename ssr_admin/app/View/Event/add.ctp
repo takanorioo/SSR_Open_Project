@@ -33,13 +33,10 @@
                      <tr <?php if (!empty($this->validationErrors['Event']['date'])) echo 'class="error"';?>>
                         <th><b>時間帯</b></th>
                         <td>
-                            <?php echo $this->Form->input('Event.date', array('label' => false, 'div' => false, 'id' => false, 'type' => 'text', 'class' => 'span6', 'error'=>false)); ?>
+                            <?php echo $this->Form->input('Event.date', array('label' => false, 'div' => false, 'id' => false, 'type' => 'text', 'class' => 'span2 date', 'error'=>false)); ?>
                             <?php if (!empty($this->validationErrors['Event']['date'])): ?>
                                 <span class="error"><?php echo $this->Form->error('Event.date');?></span>
                             <?php endif; ?>
-                        </td>
-                        <td>
-                        	<p 	style="color: gray;">　ex ) 2013-11-30</p>
                         </td>
                     </tr>
                 </table>

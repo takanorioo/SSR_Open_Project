@@ -192,7 +192,6 @@ class CompletionController extends AppController
 
             $data['Certification'] = $this->request->data['Certification'];
             $data['Certification']['user_id'] = $this->me['User']['id'];
-            $data['Certification']['completion_day'] = $this->request->data['Certification']['completion_day']['year'];
 
             // バリデーション処理
             $this->Certification->set($data['Certification']);
